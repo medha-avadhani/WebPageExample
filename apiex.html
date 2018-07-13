@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initalscale=1" >
+<title>Weather</title>
+<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="./weather.js"></script> 
+</head>
+<body>
+<div class="container">
+<div class="col-xs-4">
+<h1> WELCOME </h1><br>
+<h5>Click the button to know the current Weather of the city:</h5><br>
+<div class="form-group">
+<form class="form-default">
+<label class="control=label" for="city">City:</label>
+<input id="city" type="text" name="city" placeholder="Enter City" class="form-control"><br>
+<button type="button" id="btn1" class="btn btn-primary"> Current Weather</button>
+</form>
+<div id="WeatherResponse">
+</div>
+</div>
+</div>
+</div>
+<!-- <script> -->
+<!-- function getWeather(){ -->
+	<!-- console.log("Hello!"); -->
+	<!-- var cityName=$('#city').val(); -->
+	<!-- console.log(cityName); -->
+	<!-- var call="https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=b6907d289e10d714a6e88b30761fae22&units=metric"; -->
+	<!-- $.getJSON(call,wCallBack); -->
+	<!-- function wCallBack(wData){ -->
+	<!-- console.log("Entered!"); -->
+	<!-- var cityName= wData.name; -->
+	<!-- var country=wData.sys.country; -->
+	<!-- var description=wData.weather[0].description; -->
+	<!-- console.log(wData.name,wData.sys.country,wdata.weather[0].description); -->
+	<!-- $('.WeatherResponse').append("The weather in"+cityName+" "+country+"currently is"+description); -->
+<!-- } -->
+<!-- } -->
+<!-- </script> -->
+</body>
+</html>
