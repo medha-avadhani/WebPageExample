@@ -13,6 +13,7 @@
 <script src="./j.js"></script>
 <script src="./validation.js"></script>
 <!-- <script src="./loc.js"> -->
+<script src="./weather.js"></script>
 </head>
 <body>
 <nav  class="navbar navbar-inverse">
@@ -117,6 +118,19 @@
 <li><a href="#">4</a></li>
 <li class="next"><a href="#">Next</a></li>
 </ul>
+</div>
+</div>
+<div class="container">
+<div class="col-xs-4">
+<h5>Click the button to know the current Weather of the city:</h5><br>
+<div class="form-group">
+<form class="form-default">
+<label class="control=label" for="city">City:</label>
+<input id="city" type="text" name="city" placeholder="Enter City" class="form-control"><br>
+<button type="button" id="btn1" class="btn btn-primary"> Current Weather</button>
+</form>
+<div id="WeatherResponse">
+</div>
 </div>
 </div>
 <!-- <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
