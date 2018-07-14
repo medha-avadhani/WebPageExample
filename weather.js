@@ -4,7 +4,7 @@ $(document).ready(function(){
 		var cityName=$('#city').val();
 		console.log(cityName);
 		if(cityName != ''){
-			var key='ea663da3cfd491eaabb18c92ab866709';
+			// var key='ea663da3cfd491eaabb18c92ab866709';
 			$.ajax({
 				url:"https://api.openweathermap.org/data/2.5/weather?q=" + cityName +"&APPID=ea663da3cfd491eaabb18c92ab866709&units=metric",
 				type:"GET",

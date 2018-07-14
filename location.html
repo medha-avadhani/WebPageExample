@@ -4,10 +4,10 @@
 <meta http-equiv="X-UA-compatible" content="IE=edge">
 <meta name="viewport"content="width=device-width, initalscale=1" >
 <title>Location</title>
-<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="./bootstrap/js/bootstrap.min.js"></script>
-<script src="./loc.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../scripts/location.js"></script>
 </head>
 <body>
 <div class="container">
@@ -17,39 +17,8 @@
 <p><b>Click the button to get current location</b></p>
 <button class="btn btn-primary" type="button" onclick="getLoc()">Location</button>
 <div class="container" id="map" style="width:300;height:400"></div>
-<div class="container" id="ll" ></div>
+<div class="container" id="latlong" ></div>
 <p id="para"></p>
 </div>
-<!-- <script> -->
-<!-- var x=document.getElementById("para"); -->
-<!-- function getLoc(){ -->
-	<!-- if(navigator.geolocation){ -->
-		<!-- navigator.geolocation.getCurrentPosition(showPosition,showError); -->
-	<!-- } -->
-	<!-- else{ -->
-		<!-- x.innerHTML="Location cannot be shown"; -->
-	<!-- } -->
-<!-- } -->
-<!-- function showPosition(position){ -->
-	<!-- var latlon=position.coords.latitude+","+position.coords.longitude; -->
-	<!-- var img="https://maps.googleapis.com/maps/api/staticmap?center=" -->
-    <!-- +latlon+"&zoom=14&size=400x300&key=AIzaSyBo1sIEIc_4oi-VhfKrVStPbpzLr7RG8X4"; -->
-	<!-- document.getElementById("map").innerHTML="<img src="+img+">"; -->
-	<!-- document.getElementById("ll").innerHTML="Latitude:"+position.coords.latitude+"\n"+"Longitude:"+position.coords.longitude;  -->
-<!-- } -->
-<!-- function showError(error){ -->
-	<!-- switch(error.code){ -->
-		<!-- case error.PERMISSION_DENIED: -->
-			<!-- x.innerHTML="Location information unavailable" -->
-			<!-- break; -->
-		<!-- case error.TIMEOUT: -->
-			<!-- x.innerHTML="The request timeout" -->
-			<!-- break; -->
-		<!-- case error.UNKNOWN_ERROR: -->
-			<!-- x.innerHTML="Unknow error" -->
-			<!-- break; -->
-	<!-- } -->
-<!-- } -->
-<!-- </script> -->
 </body>
 </html>

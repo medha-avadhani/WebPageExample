@@ -1,0 +1,41 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initalscale=1" >
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../scripts/registerForm.php"></script>
+<title>Register Here</title>
+<script type="text/javascript" src="./scripts/pswdConfirm.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>Register Here:</h1>
+<div class="form-group">
+<form class="form-default"  action="../php/registerForm.php" method="POST">
+<div class="col-xs-4">
+<label class="control-label" for="fname">First Name:</label>
+<input class="form-control" type="text" name="fname" id="firstname" required><br>
+<label class="control-label" for="lname">Last Name:</label>
+<input class="form-control" text="text" name="lname" id="lastname" required><br>
+<label class="control-label" for="gender">Gender:</label>
+<div class="radio">
+<label class="radio-inline"><input type="radio" value="male" name="gender">Male</label>
+<label class="radio-inline"><input type="radio" name="gender" value="female">Female</label>
+</div><br>
+<label class="control-label" for="usrname">User Name:</label>
+<input class="form-control" text="text" name="usrname" id="username" required><br>
+<label class="control-label" for="psswd">Password:</label>
+<input class="form-control" type="password" name="psswd" id="password" required><br>
+<label class="control-label" for="reenterPsswd">Re-enter Password:</label>
+<input class="form-control" type="password" name="reenterPsswd" id="confirmPassword" required><br>
+<button class="btn btn-primary" name="registerBtn" type="submit" id="submitBtn" value="register">Submit</button>
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>
