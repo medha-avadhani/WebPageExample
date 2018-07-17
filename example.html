@@ -13,6 +13,11 @@
 <script src="./scripts/hiding.js"></script>
 <script src="./scripts/ageValidation.js"></script>
 <script src="./scripts/weather.js"></script>
+<!-- <script src="./php/registerForm1.php"></script>  -->
+<script type="text/javascript" src="./scripts/pswdConfirm.js"></script>
+<link rel="stylesheet" href="./css/popUp.css" >
+<script src="./scripts/registerForm.js"></script>
+<script src="./scripts/loginForm.js"></script>
 </head>
 <body>
 <nav  class="navbar navbar-inverse">
@@ -57,20 +62,17 @@
 </div>	
 <div class="container">
 <div class=form-group">
-<form class="form-default">
+<form class="form-default" id="lForm" method="POST" action="./php/loginValidation.php">
 <div class="col-xs-4">
 <label class="control-label" for="name">User Name:</label>
 <input class="form-control" id="usr" type="text" name="name" placeholder="Enter username" ><br>
 <label class="control-label" for="psswd">Password:</label>
 <input class="form-control" type="password" name="psswd" placeholder="Enter password"><br>
-<label class="control-label" for="age">Age:</label>
-<input class="form-control" id="id" type="number" min="18" max="60" required><br>
 <div class="checkbox">
 <label><input type="checkbox" value="">Remember me</label>
 </div>
-<button type="button" onclick="check()" class="btn btn-primary">Login</button>
-<br>
-<p id="para"></p>
+<button type="submit" id="loginBtn" class="btn btn-success">Login</button>
+
 </form>
 </div>
 </div>
@@ -78,8 +80,56 @@
 <br>
 <div class="container">
 <div class="col-xs-4">
+<button  class="btn btn-success" onclick="document.getElementById('popUp').style.display='block'" >Register</button>
+</div>
+</div>
+<br>
+<div class="container">
+<div class="col-xs-4">
+<label class="control-label" for="age">Age:</label>
+<input class="form-control" id="id" type="number" min="18" max="60" required><br>
+<button type="button" onclick="check()" class="btn btn-primary">Check</button>
+<p id="para"></p>
 <button class="btn btn-success" id="t">Show value</button>
-<button  id="signUp" class="btn btn-success" onclick="window.location='./htmls/register.html';">sign up</button>
+<button type="button" class="btn btn-success" onclick="window.location.href='./php/displayDb.php'">View</button>
+</div>
+</div>
+<br>
+<div class="container">
+<div id="popUp" class="pop">
+<span onclick="document.getElementById('popUp').style.display='none'" class="closePopUp">&times;</span>
+<div class="form-group">
+<form class="form-default popUpForm"  id="pForm" action="./php/registerForm1.php" method="POST">
+<div class="openPopUp">
+<h1>Register Here:</h1>
+<label class="control-label" for="fname">First Name:</label>
+<input class="form-control pstyle" type="text" name="fname" id="firstname" required>
+<br>
+<label class="control-label" for="lname">Last Name:</label>
+<input class="form-control pstyle" text="text" name="lname" id="lastname" required>
+<br>
+<label class="control-label" for="gender">Gender:</label>
+<div class="radio">
+<label class="radio-inline"><input type="radio" value="male" name="gender">Male</label>
+<label class="radio-inline"><input type="radio" name="gender" value="female">Female</label>
+</div>
+<br>
+<label class="control-label" for="usrname">User Name:</label>
+<input class="form-control pstyle" text="text" name="usrname" id="username" required>
+<br>
+<label class="control-label" for="psswd">Password:</label>
+<input class="form-control pstyle" type="password" name="psswd" id="password" required>
+<br>
+<label class="control-label" for="reenterPsswd">Re-enter Password:</label>
+<input class="form-control pstyle" type="password" name="reenterPsswd" id="confirmPassword" required>
+<br>
+<div class="clearFix">
+<button class="btn btn-primary submitBtn pButton" name="registerBtn" type="submit" id="submitBtn" onclick="document.getElementById('popUp').style.display='none'" value="register">Submit</button>
+<button class="btn btn-primary cancelBtn pButton" id="cancelBtn" type="reset" onclick="document.getElementById('popUp').style.display='none'">Cancel</button> 
+</div>
+</div>
+</form>
+</div>
 </div>
 </div>
 <br>
@@ -91,11 +141,9 @@
 </div>
 <br>
 <div class="container">
-<div class="container">
 <br>
 <p id="one"> HTML is a standard markup language used to design webpages.</p>
 <p id="two"> CSS is used to design styles to your webpages.</p>
-</div>
 </div>
 <div class="container">  
  <div class="col-xs-4">
@@ -116,7 +164,8 @@
 </div>
 <div class="container">
 <div class="col-xs-4">
-<h5>Click the button to know the current Weather of the city:</h5><br>
+<h5>Click the button to know the current Weather of the city:</h5>
+<br>
 <div class="form-group">
 <form class="form-default">
 <label class="control=label" for="city">City:</label>
@@ -127,7 +176,6 @@
 </div>
 </div>
 </div>
-<!-- <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-<!-- <script src="./bootstrap/js/bootstrap.min.js"></script> -->
+</div>
 </body>
 </html>
