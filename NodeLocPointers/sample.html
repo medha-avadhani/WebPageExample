@@ -12,6 +12,8 @@
 <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo1sIEIc_4oi-VhfKrVStPbpzLr7RG8X4&callback=initMap">
 </script>
+<link rel="stylesheet" href="./css/popup.css">
+<script src="./Scripts/View.js"></script>
 <style>
       #map {
         height: 400px;
@@ -27,19 +29,43 @@
 			<div class="form-group">
 				<div class="col-xs-4">	
 	  				<form class="form-default" action="./php/Save.php"  id="markerForm" method="POST">
-  						<label class="control-label" for="name">Name:</label>
-  						<input type="text" name="name" class="form-control" required><br>
+  						<label class="control-label" for="RR_no">RR Number:</label>
+  						<input type="text" name="RR_no" class="form-control" required><br>
     					<label class="control-label" for="lat">Latitude:</label>
     					<input type="text" class="form-control" name="lat" id="lat" required><br>
     					<label class="control-label" for="lon">Longitude:</label>
     					<input type="text" name="lon" id="lon" class="form-control" required><br>
     					<button type="submit" class="btn btn-primary" id="save">Save</button>
+              
   					</form>
   				</div>
   			</div>
 		</div>
 	</div>
-	<div id="map"></div>
+  <!-- Popup -->
+  <div class="container">
+    <div class="col-xs-4" style="padding-left: 30px;">
+    <button  type="button" class="btn btn-primary" id="view" onclick="document.getElementById('DbPopUp').style.display='block'">View</button>
+    </div>
+    <div id="DbPopUp" class="DbView">
+     <span onclick="document.getElementById('DbPopUp').style.display='none'" class="closePopUp">&times;</span>
+      <div class="container">
+        <div class="DbPop">
+          <div class="displayPopUp">
+            <h1>Database Content:</h1>
+           <div id="Display" class="blockDisplay">
+           </div>
+           <br>
+           <div class="clearFix">
+             <button class="btn btn-primary cancelBtn pButton" id="cancelBtn" type="reset" onclick="document.getElementById('DbPopUp').style.display='none'">Cancel</button> 
+            </div>
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>
+  <br>
+  <div id="map"></div>
 </body>
 </html>
 

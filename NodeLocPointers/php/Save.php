@@ -1,8 +1,8 @@
 <?php
-$name = $_POST['name'];
+$RR_no = $_POST['RR_no'];
 $latitude = $_POST['lat'];
 $longitude = $_POST['lon'];
-if(!empty($name) || !empty($latitude) || !empty($longitude)){
+if(!empty($RR_no) || !empty($latitude) || !empty($longitude)){
 	 $host= "localhost";
 	 $dbusername="medha";
 	 $dbpassword="";
@@ -12,7 +12,7 @@ if(!empty($name) || !empty($latitude) || !empty($longitude)){
 		die('Connect Error('.mysqli_connect_error() .')'. mysqli_connect_error());
 		
 	}else{
-		$sql = "INSERT INTO  marker (`Name`,`Latitude`,`Longitude`) VALUES('$name',$latitude,$longitude)";
+		$sql = "INSERT INTO  marker (`RR_no`,`Latitude`,`Longitude`) VALUES('$RR_no',$latitude,$longitude)";
 		// echo "inside else";
 		if($conn->query($sql)){
 			echo "New record is inserted successfully";

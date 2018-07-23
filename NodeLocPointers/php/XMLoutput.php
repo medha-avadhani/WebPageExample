@@ -28,9 +28,10 @@ while ($row = $result->fetch_assoc()){
   $node = $dom->createElement("marker");
   $newnode = $parnode->appendChild($node);
   $newnode->setAttribute("ID",$row['ID']);
-  $newnode->setAttribute("Name",$row['Name']);
+  $newnode->setAttribute("RR_no",$row['RR_no']);
   $newnode->setAttribute("Latitude", $row['Latitude']);
   $newnode->setAttribute("Longitude", $row['Longitude']);
+  $newnode->setAttribute("state",$row['state']);
 }
 
 echo $dom->saveXML();

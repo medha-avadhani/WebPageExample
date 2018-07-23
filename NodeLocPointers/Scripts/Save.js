@@ -10,6 +10,9 @@ $(document).ready(function(){
 				$("#markerForm").trigger("reset");
 			}
 		});
-		return false;
 	});
+	/*$("#reset").click(function(){
+		location.reload(true);
+	<button type="button" class="btn btn-primary" id="reset">Refresh</button>
+	});*/
 });
