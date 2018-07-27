@@ -9,4 +9,12 @@ $(document).ready(function(){
 				}
 		});
 	});
+	$.ajax({
+		type:"POST",
+		url: "./php/activeDeadNodesCount.php",
+		async:false,
+		success: function(data){
+			$('#nodeInfo').html(data);
+		}
+	});
 });

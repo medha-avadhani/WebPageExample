@@ -1,6 +1,6 @@
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-                center: new google.maps.LatLng(12.9716,77.5946),
+                center: new google.maps.LatLng(11.9716,76.2946),
                 zoom: 8
   });
   var infoWindow = new google.maps.InfoWindow;
@@ -51,3 +51,4 @@ function downloadUrl(url, callback) {
 }
 function doNothing() {}
     
+
